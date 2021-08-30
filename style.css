@@ -1,0 +1,24 @@
+#main {
+    display: flex;
+}
+#navBar {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    padding-right: 80px;
+}
+
+.containerDiv {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.projectBtnDiv{
+    display: flex;
+    flex-direction: column;
+}
+
+.doneToDo {
+    text-decoration: line-through;
+}

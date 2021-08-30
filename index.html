@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Project: Todo list</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id='main'>
+        <nav id='navBar'>
+            <button id='homeBtn'>Home</button>
+            <button id='todayBtn'>Today</button>
+            <button id='weekBtn'>Week</button>
+            <h1>Projects</h1>
+            <button id='addProjectBtn'>Add a project</button>
+            <form id='projectForm'>
+                <input type='text' id='projectTitle' name='projectTitle' required>
+                <button type='button' id='projectAddBtn'>Add</button>
+                <button type='button' id='projectCancelBtn'>Cancel</button>
+            </form>
+        </nav>
+        <div class='containerDiv'>
+            <div id='formDiv'>
+                <button id='addToDoBtn'>Add something to do</button>
+                <form id='form'>
+                    <input type='text' name='title' required id='toDoTitle'>
+                    <input type='date' name='date' required id='toDoDate'>
+                    <button type='button' id='submitToDo'>Add</button>
+                    <button type='button' id='cancelToDo'>Cancel</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
