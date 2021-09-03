@@ -11,19 +11,25 @@ const projectsBtn = document.querySelector('#addProjectBtn')
 
 homeBtn.disabled = true
 
-homeBtn.addEventListener('click', () => {      
+homeBtn.addEventListener('click', () => {
+    let btnArr = [...document.querySelectorAll('.navButton')]
+    for(let btn of btnArr) {
+        if (btn.classList.contains('active')) {
+            btn.classList.remove('active')
+            btn.disabled = false
+        }
+    }
+    homeBtn.classList.add('active')     
     containerTitle.textContent = "Home"
     if (main.contains(projectArea)) {           // page switching logic
         main.appendChild(baseDiv)
         main.removeChild(projectArea)
         addProjectFuncOnce = false
     }
-    todayBtn.disabled = false
-    homeBtn.disabled = true
-    weekBtn.disabled = false
     for (let i=0; i<divArr.length; i++) {       // display all to do's
         divArr[i].style.display = ''
     }
+
 })
 
 todayBtn.addEventListener('click', () => {
@@ -32,10 +38,16 @@ todayBtn.addEventListener('click', () => {
         main.removeChild(projectArea)
         addProjectFuncOnce = false
     }
-    homeBtn.disabled = false
-    todayBtn.disabled = true
-    weekBtn.disabled = false
+
     todayPage()
+    let btnArr = [...document.querySelectorAll('.navButton')]
+    for(let btn of btnArr) {
+        if (btn.classList.contains('active')) {
+            btn.classList.remove('active')
+            btn.disabled = false
+        }
+    }
+    todayBtn.classList.add('active')     
 })
 
 
@@ -49,6 +61,14 @@ weekBtn.addEventListener('click', () => {
     todayBtn.disabled = false
     homeBtn.disabled = false
     weekPage()
+    let btnArr = [...document.querySelectorAll('.navButton')]
+    for(let btn of btnArr) {
+        if (btn.classList.contains('active')) {
+            btn.classList.remove('active')
+            btn.disabled = false
+        }
+    }
+    weekBtn.classList.add('active')     
 })
 
 

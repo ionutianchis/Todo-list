@@ -1,22 +1,189 @@
+@font-face {
+    src: url('./fonts/Roboto-Regular.ttf');
+    font-family: roboto;
+}
+
+html {
+    font-family: roboto;
+}
+
+body {
+    margin: 0;
+}
+
 #main {
     display: flex;
 }
+
+/* nav bar */
+
 #navBar {
+    color: white;
     display: flex;
     flex-direction: column;
-    width: 150px;
-    padding-right: 80px;
+    width: 250px;
+    background-color: #0b374d;
+    min-height: 100vh;
+}
+
+.navButton {
+    color: white;
+    width: 100%;
+    height: 60px;
+    background-color: transparent;
+    border: none;
+}
+
+.newProjectBtn {
+    width: 80%
+}
+
+.projectBtnDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.deleteProjectBtn{
+    width: 20%;
+    height: 30px;
+    background:url('./images/removeproject.png') no-repeat;
+    cursor: pointer;
+    border: none;
+}
+
+.navButton:hover{
+  transform: translateY(-0.45em);
+}
+
+.active {
+    border-bottom: 2px solid white;
+}
+
+/* container div */
+
+#projectForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.projectButtonContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
 }
 
 .containerDiv {
     display: flex;
     flex-direction: column;
-
+    margin-left: 50px;
+    margin-top: 60px;
+    width: 60%;
 }
 
-.projectBtnDiv{
+#formDiv{
+    margin-left: auto;
+    margin-bottom: 50px;
+}
+
+.addFormBtn {
+    width: 90px;
+    height: 30px;
+    background-color: rgba(123, 255, 48, 0.7);
+    border: none;
+}
+
+.addFormBtn:hover{
+    opacity: 0.4;
+}
+.cancelFormBtn {
+    width: 90px;
+    height: 30px;
+    background-color: rgba(255, 59, 0, 0.7);
+    border: none;
+    margin-left: 15px;
+}
+
+.cancelFormBtn:hover {
+    opacity: 0.4;
+}
+
+#projectAddBtn, #projectCancelBtn {
+    margin-top: 10px
+}
+
+#addToDoBtn {
+    position: fixed;
+    margin-left: 30px;
+    margin-top: -10px;
+    height: 50px;
+    width: 90px;
+    background:url('./images/add.png') no-repeat;
+    cursor:pointer;
+    border:none;
+}
+
+.formContainer {
     display: flex;
     flex-direction: column;
+    position: fixed;
+    background-color: white;
+    height: 150px;
+    justify-content: center;
+    width: 250px;
+    align-items: center;
+    border: 1px solid black;
+    border-left: 0;
+    border-right: 0;
+    margin-left: 30px;
+    margin-top: -50px;
+}
+
+.formContainer input{
+    width: 97%;
+    height: 20px;
+}
+
+#toDoDate {
+    width: 50%;
+    margin-top: 10px;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.toDoDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+
+.toDoDiv h1 {
+    font-size: 20px;
+}
+
+.resetStatusBtn {
+    height: 30px;
+    width: 90px;
+    background:url('./images/reset.png') no-repeat;
+    cursor:pointer;
+    border:none;
+}
+
+.deleteToDoBtn {
+    height: 30px;
+    width: 90px;
+    background:url('./images/delete.png') no-repeat;
+    cursor:pointer;
+    border:none;
 }
 
 .doneToDo {

@@ -17,7 +17,7 @@ function weekPage() {
         } 
 
         for (let i=0; i<baseObjArr.length; i++) {       // loops through the objects and hides them if they are not from current week
-            if (!(week.includes(format(baseObjArr[i].dueDate, 'dd/MM/yyyy')))) {
+            if (!(week.includes(baseObjArr[i].dueDate))) {
                 divArr[i].style.display = 'none'
             }
         }
