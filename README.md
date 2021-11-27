@@ -1,8 +1,5 @@
-# Todo-list project
-## Made using JS, HTML, CSS, webpack and localStorage.
+# Todo-list
 
-This was my first time using localStorage ! 
+A to do list made with JS, HTML, CSS, webpack, and localStorage.
 
 <a href="https://jonthejon10.github.io/Todo-list/">Live preview</a>
-
-<img src='dist/images/project-preview.png' alt=''>
