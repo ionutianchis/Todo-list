@@ -24,6 +24,8 @@ body {
     width: 250px;
     background-color: #0b374d;
     min-height: 100vh;
+    position: relative;
+    align-items: center;
 }
 
 .navButton {
@@ -32,6 +34,7 @@ body {
     height: 60px;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 .newProjectBtn {
@@ -42,6 +45,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 100%;
 }
 
 .deleteProjectBtn{
@@ -60,6 +64,29 @@ body {
     border-bottom: 2px solid white;
 }
 
+#navBar footer {
+    position: fixed;
+    bottom: 0;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+}
+
+.github-button {
+    width: 26px;
+    height: 25px;
+    background-image: url('./images/github-icon.svg');
+    background-size: cover;
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: transform .5s ease-in-out;
+}
+
+.github-button:hover {
+    transform: rotate(360deg);
+}
 /* container div */
 
 #projectForm {
@@ -97,6 +124,7 @@ body {
 .addFormBtn:hover{
     opacity: 0.4;
 }
+
 .cancelFormBtn {
     width: 90px;
     height: 30px;

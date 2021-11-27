@@ -24,7 +24,7 @@ homeBtn.addEventListener('click', () => {
     if (main.contains(projectArea)) {           // page switching logic
         main.appendChild(baseDiv)
         main.removeChild(projectArea)
-        addProjectFuncOnce = false
+        addProjectFuncOnce.once = false
     }
     for (let i=0; i<divArr.length; i++) {       // display all to do's
         divArr[i].style.display = ''
@@ -36,9 +36,8 @@ todayBtn.addEventListener('click', () => {
     if (main.contains(projectArea)) {
         main.appendChild(baseDiv)
         main.removeChild(projectArea)
-        addProjectFuncOnce = false
+        addProjectFuncOnce.once = false
     }
-
     todayPage()
     let btnArr = [...document.querySelectorAll('.navButton')]
     for(let btn of btnArr) {
@@ -55,7 +54,7 @@ weekBtn.addEventListener('click', () => {
     if (main.contains(projectArea)) {
         main.appendChild(baseDiv)
         main.removeChild(projectArea)
-        addProjectFuncOnce = false
+        addProjectFuncOnce.once = false
     }
     weekBtn.disabled = true
     todayBtn.disabled = false
