@@ -3,6 +3,6 @@
 
 This was my first time using localStorage ! 
 
-<a href="https://jonthejon10.github.io/Todo-list/">Live preview</a>
+<a href="https://ionutianchis.github.io/Todo-list/">Live preview</a>
 
 <img src='dist/images/project-preview.png' alt=''>
